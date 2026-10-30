@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting to SSO...</title>
+    <meta http-equiv="refresh" content="0; url=http://IP_SERVER_MIDDLEWARE:3000/auth/callback?mac=$(mac)">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 20vh; font-family: sans-serif;">
+        <h2>Sedang mengarahkan ke SSO Talenta...</h2>
+        <p>Jika Anda tidak otomatis diarahkan, silakan klik tombol di bawah ini:</p>
+        <!-- Tombol fallback jika redirect otomatis diblokir browser -->
+        <a href="http://IP_SERVER_MIDDLEWARE:3000/auth/callback?mac=$(mac)" style="padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">Masuk dengan SSO</a>
+    </div>
+
+    <script type="text/javascript">
+        // Atau gunakan JavaScript untuk redirect instan
+        window.location.href = "http://IP_SERVER_MIDDLEWARE:3000/auth/callback?mac=$(mac)";
+    </script>
+</body>
+</html>
